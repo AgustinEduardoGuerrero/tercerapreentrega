@@ -1,0 +1,102 @@
+.degustaciones {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    background-color: rgb(240, 184, 162);
+    padding: 2px;
+    grid-template-areas: 
+    "imgDegustacion contenidoDegustacion"
+    "imgDegustacion formularioDegustaciones";
+  }
+  
+  .imgDegustacion {
+    grid-area: imgDegustacion;
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+  }
+  
+  .contenidoDegustacion {
+    grid-area: contenidoDegustacion;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 10px 0px 10px;
+  }
+  h2 {
+    @include tituloSeccion1(rgba(228, 133, 89, 0.877),antiquewhite)
+  }
+
+  p{
+    @include parrafoSeccion1(rgba(240, 205, 190, 0.877),rgb(54, 51, 47))
+  }
+  
+  .formularioDegustaciones {
+    grid-area: formularioDegustaciones;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: stretch;
+    padding: 0px 10px 0px 10px;
+  
+    label {
+      display: block;
+      color: antiquewhite;
+      font-size: 25px;
+      font-weight: 400;
+      text-align: center;
+      padding: 5px;
+    }
+  
+    input {
+      border-width: 1px;
+      border-radius: 20px;
+      background-color: bisque;
+      text-align: center;
+      font-size: 100%;
+      height: 40px;
+      width: 100%;
+      margin: 1rem;
+    }
+  }
+
+  /* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* TABLET */
+@media (max-width: 768px){
+    .degustaciones{    
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 3;
+        background-color: rgb(240, 184, 162);
+        padding: 2px;
+        grid-template-areas: 
+        "imgDegustacion contenidoDegustacion"
+        "formularioDegustaciones formularioDegustaciones"
+    }
+    
+    .imgDegustacion{
+        width: 80vh;
+    }
+
+    .cajaForm{
+        display: flex;
+    }
+}
+/* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* MOBILE */
+@media (max-width:480px){
+    .degustaciones{
+        display: grid;
+        grid-template-rows: 3;
+        grid-template-areas: 
+        "imgDegustacion"
+        "contenidoDegustacion"
+        "formularioDegustaciones"
+    }
+
+    .imgDegustacion{
+        width: 100vw;
+        padding-bottom: 10px;
+    }
+}

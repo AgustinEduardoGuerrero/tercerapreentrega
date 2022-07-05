@@ -1,0 +1,44 @@
+  .equipo {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 1;
+    background-color: rgb(240, 184, 162);
+    padding: 2px;
+    grid-template-areas: 
+    "imgEquipo contenidoEquipo"
+  }
+  
+  .imgEquipo {
+    grid-area: imgEquipo;
+    display: flex;
+    flex-direction: column;
+    background-color: #e76f51;
+    align-content: center;
+    width: 50vw;
+  }
+  
+  .contenidoEquipo {
+    grid-area: contenidoEquipo;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 10px 0px 10px;
+  }
+
+
+  /* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* TABLET */
+@media (max-width: 768px){
+  .main-content-nuestro-equipo{
+    width: 100%;
+  }
+
+  .imgequipo {
+  max-width: 0px;
+  }
+
+  .textoProducto {
+  display: flex;
+  flex-direction: column;
+  }
+}

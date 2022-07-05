@@ -1,0 +1,133 @@
+
+  .presentacion{
+    display: grid;
+    background-color: rgb(240, 184, 162);
+    padding: 5px;
+    grid-gap: 3px;
+    grid-template-columns: (3, auto);
+    grid-template-areas: 
+    "bannerIndex seccion1 seccion1"
+}
+
+  .seccion1 {
+    grid-area: seccion1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  
+    h2 {
+      @include tituloSeccion1(rgba(228, 133, 89, 0.877),antiquewhite)
+    }
+
+    p{
+      @include parrafoSeccion1(rgba(240, 205, 190, 0.877),rgb(54, 51, 47))
+    }
+  }
+  
+  .imgBanner {
+    width: 100%;
+    opacity: 60%;
+    justify-content: center;
+  }
+  
+  .bannerIndex {
+    grid-area: bannerIndex;
+    display: flex;
+    width: 100%;
+  }
+  
+  .imgIndex {
+    width: 100%;
+  }
+  
+  .destacados {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 158, 102, 0.664);
+    align-items: center;
+    border-radius: 5px;
+  
+ 
+    .tituloDestacados {
+        display: block;
+        border-color: beige;
+        font-weight: bold;
+        font-size: 60px;
+      }
+
+      h2 {
+        @extend %tituloDestacados;
+        background-color: rgba(255, 158, 102, 0.664);
+      }
+  }
+  
+  .destacadosSeleccion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    padding: 10px;
+    p{
+      @extend %parrafoProducto;
+    }
+
+  }
+ 
+  .producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0,5rem;
+  
+    &:hover {
+      transform: scale(1.1, 1.1);
+      transition-duration: 1s;
+      opacity: 80%;
+    }
+
+    .textoProducto {
+        color: white;
+        font-size: 1.25rem;
+        padding-top: 0.5rem;
+        ul {
+            list-style: none;
+            text-align: center
+        }
+    }
+    
+  }
+  
+
+
+/* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* TABLET */
+@media (max-width: 768px)  {
+  .presentacion {
+    grid-template-areas: "seccion1 seccion1 seccion1";
+  }
+  
+  .imgIndex {
+    max-width: 0px;
+  }
+  
+  .textoProducto {
+    display: flex;
+    flex-direction: column;
+  }
+
+ }
+
+ /* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* MOBILE */
+@media (max-width:480px){
+  .producto{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    grid-template-areas: 
+    "producto producto"
+    "producto producto"
+  }  
+}
+
+  

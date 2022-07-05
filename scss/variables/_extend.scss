@@ -1,0 +1,23 @@
+
+%parrafoProducto{
+    color: antiquewhite;
+    top: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    left: 140px;
+    border: solid 2px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+%tituloDestacados{
+    font-family: 'Nunito', sans-serif;
+    color: beige;
+    padding: 40px;
+    text-align: center;
+}
+
+%fontNavBar{
+    font-family: 'IBM Plex Sans', sans-serif;
+}

@@ -1,0 +1,114 @@
+.footer{
+    grid-area: footer;
+    background-color: rgb(212, 129, 129);
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: (3);
+    grid-template-areas: 
+    "logoFooter newsletter redes" 
+    
+}
+  .logoFooter {
+    grid-area: logoFooter;
+    width: 150px;
+    padding: 3px;
+    background-image: cover;
+  }
+  
+  .newsletter {
+    label {
+      grid-area: textoNewsletter;
+      display: flex;
+      flex-direction: column;
+      color: antiquewhite;
+      font-weight: bold;
+      margin: 1rem;
+      padding: 20px 20px 1px 20px;
+      align-items: center;
+    }
+  
+    input {
+      grid-area: newsletter;
+      display: flex;
+      border-width: 2px;
+      border-radius: 25px;
+      background-color: bisque;
+      text-align: center;
+      font-size: 100%;
+      font-weight: bold;
+      height: 40px;
+      width: 400px;
+    }
+  }
+  
+  .redes {
+    grid-area: redes;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    padding: 20px;
+    justify-content: flex-end;
+    text-decoration: none;
+  
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  
+    li {
+      display: flex;
+      justify-content: space-around;
+  
+      a {
+        display: flex;
+        text-decoration: none;
+        color: rgb(252, 250, 248);
+        padding: 1rem;
+  
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+
+/* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* TABLET */
+  @media (max-width: 768px){
+  .footer{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logoFooter{
+    width: 0px;
+  }
+  
+  .newsletter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  
+    label {
+      padding: 1rem;
+    }
+  }
+}
+
+/* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+/* MOBILE */
+@media (max-width:480px){
+    .newsletter{
+        display: grid;
+        grid-template-areas:
+        "textoNewsletter"
+        "newsletter"
+    }
+
+    .redes{
+        justify-content: center;
+    }
+}

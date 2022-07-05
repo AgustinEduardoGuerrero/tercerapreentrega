@@ -1,0 +1,11 @@
+@mixin tituloSeccion1($fondo, $letra) {
+    padding: 15px;
+    background-color: $fondo;
+    color: $letra;      
+}
+
+@mixin parrafoSeccion1($fondo, $letra) {
+    padding: 15px;
+    background-color: $fondo;
+    color: $letra;      
+}
